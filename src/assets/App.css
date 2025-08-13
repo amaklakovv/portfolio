@@ -1,3 +1,8 @@
 .App {
   text-align: center;
+  /* This ensures the App container can center its children properly */
+  display: grid;
+  place-items: center;
+  width: 100vw; /* Use viewport width to be explicit */
+  min-height: 100vh; /* Ensure the container fills the screen height */
 }
