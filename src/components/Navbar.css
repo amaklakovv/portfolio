@@ -1,0 +1,48 @@
+.navbar {
+  position: fixed;
+  top: 20px; /* Give it some breathing room from the top edge */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 700px; /* Set a max-width for larger screens */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* Ensure it stays on top of other content */
+
+  /* Glassmorphism Effect */
+  background: rgba(30, 30, 40, 0.75); /* A slightly darker glass */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: white;
+}
+
