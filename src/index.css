@@ -11,13 +11,23 @@
   -webkit-text-size-adjust: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
   background: #111827;
   background-image: linear-gradient(to top right, #111827, #374151, #111827);
 }
 
+/* This class is global and defines the sections */
+.fullscreen-section {
+  display: grid;
+  place-items: center;
+  min-height: 85vh; /* Less than full screen to hint at more content */
+  margin: 10vh auto; /* Vertical margin to create space between sections */
+  text-align: center;
+}
