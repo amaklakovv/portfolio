@@ -8,7 +8,7 @@ body {
 /* Give sections more breathing room for a cleaner look */
 .fullscreen-section {
   padding-top: 0; /* Let the h2 margin handle the top spacing */
-  padding-bottom: 4rem; /* Creates consistent space between sections */
+  padding-bottom: 1rem; /* Creates consistent space between sections */
   /* Add flex properties to center content within each section */
   display: flex;
   flex-direction: column;
@@ -18,12 +18,12 @@ body {
 
 /* Offset for the fixed navbar when scrolling to a section */
 #home, #about, #projects, #contact {
-  scroll-margin-top: 60px; /* This is the value to adjust anchor padding */
+  scroll-margin-top: 80px;
 }
 
 
 .App {
-  /* The App is now just a container for our sections */
+  /* The App is now just a container for the sections */
 }
 
 /* A reusable wrapper for consistent section layout */
@@ -34,10 +34,10 @@ body {
 
 .section-wrapper h2 {
   font-size: 2.5rem;
-  margin-top: 2rem; /* Creates space above the title */
+  margin-top: 4rem; /* Creates space above the title */
   margin-bottom: 4rem; /* Creates space below the section title */
   color: white;
-  text-align: left; /* Ensure section titles are always left-aligned */
+  text-align: center; /* Center the section titles */
 }
 
 /* Section-Specific Card Sizing */
