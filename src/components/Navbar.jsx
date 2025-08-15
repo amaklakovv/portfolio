@@ -5,7 +5,10 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <a href="#home">Andrew Maklakov</a>
+        <a href="#home">
+          <span className="full-name">Andrew Maklakov</span>
+          <span className="short-name">AM</span>
+        </a>
       </div>
       <ul className="navbar-links">
         <li><a href="#about">About</a></li>

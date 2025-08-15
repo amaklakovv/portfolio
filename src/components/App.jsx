@@ -10,12 +10,12 @@ import FlippingText from './FlippingText';
 function App() {
 
   const heroPhrases = [
-    'Software Engineering Student',
-    'Problem Solver',
-    'Team Player',
-    'Fast Learner',
-    'AI Enthusiast',
-    'Lifelong Learner'
+    'a Software Engineering Student',
+    'a Problem Solver',
+    'a Team Player',
+    'a Fast Learner',
+    'an AI Enthusiast',
+    'a Lifelong Learner'
   ];
 
   return (

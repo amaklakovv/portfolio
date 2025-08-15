@@ -32,7 +32,7 @@ function FlippingText({ phrases, period = 3000 }) {
 
   return (
     <div className="flipping-text-container">
-      I'm a
+      I'm
       <span className="flipping-text-wrapper">
         <span className={`flipping-text ${animationClass}`} onAnimationEnd={handleAnimationEnd}>
           {phrases[currentIndex]}
