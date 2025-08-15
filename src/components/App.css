@@ -1,3 +1,27 @@
+body {
+  /* A subtle, blurred, colorful gradient background */
+  background: radial-gradient(circle at 10% 20%, rgb(163, 175, 243) 0%, rgb(220, 182, 232) 100.2%);
+  
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Give sections more breathing room for a cleaner look */
+.fullscreen-section {
+  padding-top: 0; /* Let the h2 margin handle the top spacing */
+  padding-bottom: 4rem; /* Creates consistent space between sections */
+  /* Add flex properties to center content within each section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh; /* Ensure sections have enough height but aren't always full-screen */
+}
+
+/* Offset for the fixed navbar when scrolling to a section */
+#home, #about, #projects, #contact {
+  scroll-margin-top: 120px; /* This is the value to adjust anchor padding */
+}
+
+
 .App {
   /* The App is now just a container for our sections */
 }
@@ -10,7 +34,8 @@
 
 .section-wrapper h2 {
   font-size: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-top: 4rem; /* Creates space above the title */
+  margin-bottom: 4rem; /* Creates space below the section title */
   color: white;
 }
 
@@ -34,16 +59,17 @@
 /* Increase font sizes for the hero section card */
 #home .glass-card h1 {
   font-size: 2.75rem;
-  margin-bottom: 0; /* Adjust spacing */
+  margin: 0; /* Remove default margins to rely on flex gap */
 }
 
 #home .glass-card p {
   font-size: 1.2rem;
+  margin: 0; /* Remove default margins */
   color: rgba(255, 255, 255, 0.8); /* Slightly dim the subtitle */
 }
 
-/* Wider, taller card for the about section */
-#about .glass-card {
+/* Wider, taller card for the about section's main text block */
+#about .section-wrapper > .glass-card {
   max-width: 1200px; /* Consistent with the projects section width */
   width: 90%;
   padding: 2.5rem 3rem; /* Give the text some breathing room */
@@ -53,7 +79,109 @@
   gap: 1rem; /* Creates space between the paragraphs */
 }
 
+/* Style for the new "Summary" heading */
+#about .section-wrapper > .glass-card h3 {
+  font-size: 1.75rem;
+  margin: 0; /* Let the parent's gap handle spacing */
+  color: white;
+}
+
 #about p {
   line-height: 1.75; /* Improve readability of text blocks */
   color: rgba(255, 255, 255, 0.9); /* Make text slightly less stark */
+}
+
+/* Main Skills Card */
+.skills-main-card {
+  margin-bottom: 3rem;
+  padding: 2rem 2.5rem;
+}
+
+.skills-main-card h3 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-align: left;
+}
+
+/* 2x2 Grid for all skills */
+.skills-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create a 2x2 grid */
+  gap: 2.5rem;
+}
+
+/* Container for Education and Personal Interests cards */
+.about-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.about-cards-container .glass-card {
+  padding: 2rem 2.5rem;
+  text-align: left;
+}
+
+.about-cards-container h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+/* For smaller screens, stack the cards into a single column for readability */
+@media (max-width: 992px) {
+  .skills-grid-2x2,
+  .about-cards-container {
+    grid-template-columns: 1fr;
+  }
+  .skills-category {
+    margin-bottom: 2rem;
+  }
+  .skills-category:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.skills-category {
+  /* Spacing is now handled by the grid gap on larger screens */
+}
+
+.skills-category h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0;
+  margin-bottom: 1rem; /* Keep space between title and list */
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skills-list li {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.education-entry h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.education-entry p {
+  margin: 0.25rem 0;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
 }

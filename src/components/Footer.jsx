@@ -3,7 +3,7 @@ import './Footer.css';
 
 function Footer() {
   return (
-    <footer id="contact" className="footer">
+    <footer id="footer" className="footer">
       <div className="footer-content">
         <p>&copy; Andrew Maklakov. All rights reserved.</p>
         <div className="footer-links">

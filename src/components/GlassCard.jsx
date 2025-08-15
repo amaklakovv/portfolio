@@ -5,9 +5,9 @@ import './GlassCard.css';
  * A reusable component that applies a "glassmorphism" effect.
  * It accepts children, so you can put any content inside it.
  * It also has a 3D tilt effect on hover.
- * @param {{children: React.ReactNode, disableHoverEffect?: boolean, hoverIntensity?: number}} props
+ * @param {{children: React.ReactNode, className?: string, disableHoverEffect?: boolean, hoverIntensity?: number}} props
  */
-function GlassCard({ children, disableHoverEffect = false, hoverIntensity = 10 }) {
+function GlassCard({ children, className = '', disableHoverEffect = false, hoverIntensity = 10 }) {
     const [transform, setTransform] = useState(
         'perspective(1000px) rotateX(0deg) rotateY(0deg)'
     );
@@ -43,7 +43,7 @@ function GlassCard({ children, disableHoverEffect = false, hoverIntensity = 10 }
     const style = disableHoverEffect ? {} : { transform };
 
     return (
-        <div className="glass-card" ref={cardRef} style={style} {...eventHandlers}>
+        <div className={`glass-card ${className}`} ref={cardRef} style={style} {...eventHandlers}>
             {children}
         </div>
     );

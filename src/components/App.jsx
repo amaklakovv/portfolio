@@ -2,6 +2,7 @@ import './App.css'
 import GlassCard from './GlassCard';
 import Navbar from './Navbar';
 import About from './About';
+import Contact from './Contact';
 import Footer from './Footer';
 import Projects from './Projects';
 
@@ -19,6 +20,7 @@ function App() {
       </section>
       <About />
       <Projects />
+      <Contact />
       <Footer />
     </div>
   )
