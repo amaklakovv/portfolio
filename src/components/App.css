@@ -18,7 +18,7 @@ body {
 
 /* Offset for the fixed navbar when scrolling to a section */
 #home, #about, #projects, #contact {
-  scroll-margin-top: 120px; /* This is the value to adjust anchor padding */
+  scroll-margin-top: 60px; /* This is the value to adjust anchor padding */
 }
 
 
@@ -34,9 +34,10 @@ body {
 
 .section-wrapper h2 {
   font-size: 2.5rem;
-  margin-top: 4rem; /* Creates space above the title */
+  margin-top: 2rem; /* Creates space above the title */
   margin-bottom: 4rem; /* Creates space below the section title */
   color: white;
+  text-align: left; /* Ensure section titles are always left-aligned */
 }
 
 /* Section-Specific Card Sizing */
@@ -68,10 +69,8 @@ body {
   color: rgba(255, 255, 255, 0.8); /* Slightly dim the subtitle */
 }
 
-/* Wider, taller card for the about section's main text block */
-#about .section-wrapper > .glass-card {
-  max-width: 1200px; /* Consistent with the projects section width */
-  width: 90%;
+/* Specific styling for the summary card in the About section */
+.summary-card {
   padding: 2.5rem 3rem; /* Give the text some breathing room */
   text-align: left; /* Left-align text for better readability */
   display: flex;
@@ -79,13 +78,12 @@ body {
   gap: 1rem; /* Creates space between the paragraphs */
 }
 
-/* Style for the new "Summary" heading */
-#about .section-wrapper > .glass-card h3 {
+/* Style for the heading within the summary card */
+.summary-card h3 {
   font-size: 1.75rem;
   margin: 0; /* Let the parent's gap handle spacing */
   color: white;
 }
-
 #about p {
   line-height: 1.75; /* Improve readability of text blocks */
   color: rgba(255, 255, 255, 0.9); /* Make text slightly less stark */
@@ -154,6 +152,7 @@ body {
   color: rgba(255, 255, 255, 0.9);
   margin-top: 0;
   margin-bottom: 1rem; /* Keep space between title and list */
+  text-align: left;
 }
 
 .skills-list {
