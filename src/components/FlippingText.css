@@ -1,0 +1,59 @@
+.flipping-text-container {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  height: 1.5em; /* Give it a fixed height to prevent layout shifts */
+}
+
+.flipping-text-wrapper {
+  display: inline-block;
+  perspective: 800px; /* Increase perspective for a more pronounced 3D effect */
+  transform-style: preserve-3d; /* Ensures children are positioned in 3D space */
+  height: 1.5em;
+  line-height: 1.5em;
+  vertical-align: top; /* Align fixed text */
+}
+
+.flipping-text {
+  display: inline-block;
+  font-weight: 600;
+  color: white;
+  transform-origin: center center; /* Rotate around the center for a smoother feel */
+  text-align: left; /* Align text to the left */
+}
+
+.flipping-text.in {
+  animation: roll-in 0.6s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+}
+
+.flipping-text.out {
+  animation: roll-out 0.6s cubic-bezier(0.7, 0, 0.8, 0) forwards;
+}
+
+@keyframes roll-in {
+  from {
+    /* Start from the bottom face, rotated 90 degrees back */
+    transform: translateY(50%) rotateX(-90deg);
+    opacity: 0;
+  }
+  to {
+    /* Settle into the front face */
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes roll-out {
+  from {
+    /* Start at the front face */
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+  to {
+    /* Roll to the top face, rotated 90 degrees forward */
+    transform: translateY(-50%) rotateX(90deg);
+    opacity: 0;
+  }
+}

@@ -5,8 +5,18 @@ import About from './About';
 import Contact from './Contact';
 import Footer from './Footer';
 import Projects from './Projects';
+import FlippingText from './FlippingText';
 
 function App() {
+
+  const heroPhrases = [
+    'Software Engineering Student',
+    'Problem Solver',
+    'Team Player',
+    'Fast Learner',
+    'AI Enthusiast',
+    'Lifelong Learner'
+  ];
 
   return (
     <div className="App">
@@ -14,8 +24,10 @@ function App() {
       {/* Hero Section */}
       <section id="home" className="fullscreen-section">
         <GlassCard>
-          <h1>Andrew Maklakov</h1>
-          <p>Software Engineering Student</p>
+          <div className="hero-text-container">
+            <h1>Andrew Maklakov</h1>
+            <FlippingText phrases={heroPhrases} />
+          </div>
         </GlassCard>
       </section>
       <About />
