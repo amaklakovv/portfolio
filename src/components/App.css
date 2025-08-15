@@ -10,6 +10,24 @@
   width: 90%;
   max-height: 250px;
   height: 90%;
+  padding: 2rem;
+  /* Add flex properties to center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Space between elements */
+}
+
+/* Increase font sizes for the hero section card */
+#home .glass-card h1 {
+  font-size: 2.75rem;
+  margin-bottom: 0; /* Adjust spacing */
+}
+
+#home .glass-card p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8); /* Slightly dim the subtitle */
 }
 
 /* Wider, taller card for the about section */

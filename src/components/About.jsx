@@ -4,7 +4,7 @@ import GlassCard from './GlassCard';
 function About() {
   return (
     <section id="about" className="fullscreen-section">
-      <GlassCard disableHoverEffect={true}>
+      <GlassCard hoverIntensity={3}>
         <h2>About Me</h2>
         <p>
           Currently in the third-year of a Bachelor of Engineering, majoring in Software Engineering with an AI specialisation. Solid
