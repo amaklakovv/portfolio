@@ -1,14 +1,3 @@
-.projects-wrapper {
-  width: 90%;
-  max-width: 1200px;
-}
-
-.projects-wrapper h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2.5rem;
-  color: white;
-}
-
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));

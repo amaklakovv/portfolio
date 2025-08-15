@@ -2,6 +2,18 @@
   /* The App is now just a container for our sections */
 }
 
+/* A reusable wrapper for consistent section layout */
+.section-wrapper {
+  width: 90%;
+  max-width: 1200px;
+}
+
+.section-wrapper h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: white;
+}
+
 /* Section-Specific Card Sizing */
 
 /* "Business Card" style for the hero section */
@@ -32,7 +44,7 @@
 
 /* Wider, taller card for the about section */
 #about .glass-card {
-  max-width: 950px; /* More readable line length for paragraphs */
+  max-width: 1200px; /* Consistent with the projects section width */
   width: 90%;
   padding: 2.5rem 3rem; /* Give the text some breathing room */
   text-align: left; /* Left-align text for better readability */
@@ -41,12 +53,7 @@
   gap: 1rem; /* Creates space between the paragraphs */
 }
 
-#about .glass-card h2 {
-  text-align: center; /* Keep the main heading centered */
-  margin-bottom: 1.5rem; /* More space below the heading */
-}
-
-#about .glass-card p {
+#about p {
   line-height: 1.75; /* Improve readability of text blocks */
   color: rgba(255, 255, 255, 0.9); /* Make text slightly less stark */
 }

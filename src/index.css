@@ -30,4 +30,5 @@ body {
   min-height: 85vh; /* Less than full screen to hint at more content */
   margin: 10vh auto; /* Vertical margin to create space between sections */
   text-align: center;
+  scroll-margin-top: 120px; /* Offset for the fixed navbar */
 }

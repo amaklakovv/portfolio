@@ -5,7 +5,7 @@ import './Projects.css';
 function Projects() {
   return (
     <section id="projects" className="fullscreen-section">
-      <div className="projects-wrapper">
+      <div className="section-wrapper">
         <h2>My Projects</h2>
         <div className="projects-container">
           {/* Project 1 */}
@@ -32,8 +32,8 @@ function Projects() {
           <GlassCard hoverIntensity={2}>
             <div className="project-card">
               <h3>Code Catchers</h3>
-              <p>Overseeing Agile sprints and stand-ups, assisting in coordinating a six-person team across design, development, and testing.</p>
-              <p>Developed backend/frontend logic and UI features, contributing to improved game retention metrics.</p>
+              <p>Overseeing Agile sprints and stand-ups, assisting in coordinating a six-person team across design, development, and testing. 
+                Developed backend/frontend logic and UI features, contributing to improved game retention metrics.</p>
               <div className="project-tags">
                 <span className="tag">JavaScript</span>
                 <span className="tag">Project Management</span>
