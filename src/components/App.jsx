@@ -3,6 +3,7 @@ import GlassCard from './GlassCard';
 import Navbar from './Navbar';
 import About from './About';
 import Footer from './Footer';
+import Projects from './Projects';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         </GlassCard>
       </section>
       <About />
+      <Projects />
       <Footer />
     </div>
   )
