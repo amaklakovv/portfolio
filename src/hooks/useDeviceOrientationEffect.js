@@ -13,7 +13,7 @@ const throttle = (func, limit) => {
   };
 };
 
-export const useDeviceOrientationEffect = (elementRef, { enabled = false, intensity = 0.25 }) => {
+export const useDeviceOrientationEffect = (elementRef, { enabled = false, intensity = 0.5 }) => {
   useEffect(() => {
     const card = elementRef.current;
     if (!enabled || !card) {
