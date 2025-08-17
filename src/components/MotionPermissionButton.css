@@ -10,7 +10,6 @@
   border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  display: flex;
   align-items: center;
   gap: 0.75rem;
   -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
@@ -27,10 +26,8 @@
   transform: none;
 }
 
-/* Show the button only on mobile devices */
-/* This media query targets touch-capable devices, which are most likely to be mobile phones */
-@media (pointer:
- coarse) {
+/* Show the button only on mobile devices (tablets and below) */
+@media (max-width: 768px) {
   .motion-button {
     display: flex;
   }

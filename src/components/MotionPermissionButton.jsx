@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './MotionPermissionButton.css';
-import { FaMagic } from 'react-icons/fa';
+import { MdScreenRotation } from 'react-icons/md';
 
 function MotionPermissionButton({ onGrant }) {
   const [status, setStatus] = useState('idle'); // 'idle', 'requesting', 'denied'
@@ -28,8 +28,8 @@ function MotionPermissionButton({ onGrant }) {
 
   return (
     <button className="motion-button" onClick={handleClick} disabled={status === 'requesting'}>
-      <FaMagic />
-      <span>Experience Something Magical</span>
+      <MdScreenRotation />
+      <span>Experience Motion</span>
     </button>
   );
 }
