@@ -1,7 +1,15 @@
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  /* Default to a single column for mobile to ensure readability */
+  grid-template-columns: 1fr;
   gap: 2rem;
+}
+
+/* Switch to a two-column layout for tablets and larger screens */
+@media (min-width: 768px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .project-card {

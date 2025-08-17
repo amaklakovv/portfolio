@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react';
  * @param {React.RefObject<HTMLElement>} elementRef
  * @param {{enabled?: boolean, intensity?: number, smoothing?: number}} options
  */
-export const useDeviceOrientationEffect = (elementRef, { enabled = false, intensity = 0.5, smoothing = 0.08 }) => {
+export const useDeviceOrientationEffect = (elementRef, { enabled = false, intensity = 0.5, smoothing = 0.1 }) => {
   const animationFrameId = useRef(null);
 
   useEffect(() => {

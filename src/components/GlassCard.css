@@ -46,8 +46,8 @@
   );
 
   opacity: 0;
-  transition: opacity 0.4s ease-out;
-  z-index: 0; /* Position the highlight behind the content */
+  transition: opacity 0.4s ease-out, transform 0s; /* Added transform to prevent transition on z-index change */
+  z-index: -1; /* Position the highlight behind the content */
 }
 
 /* Make the highlight visible on hover */
