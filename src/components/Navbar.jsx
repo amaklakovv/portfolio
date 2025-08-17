@@ -1,9 +1,12 @@
 import React from 'react';
 import './Navbar.css';
+import { useHighlightEffect } from '../hooks/useHighlightEffect';
 
 function Navbar() {
+  const eventHandlers = useHighlightEffect();
+
   return (
-    <nav className="navbar">
+    <nav className="navbar" {...eventHandlers}>
       <div className="navbar-logo">
         <a href="#home">
           <span className="full-name">Andrew Maklakov</span>

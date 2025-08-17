@@ -10,7 +10,8 @@ import FlippingText from './FlippingText';
 function App() {
 
   const heroPhrases = [
-    'a software engineering student',
+    'a third year engineering student',
+    'a software engineering major',
     'a problem solver',
     'a team player',
     'a fast learner',
