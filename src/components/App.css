@@ -79,14 +79,18 @@
   gap: 0.5rem; /* A smaller gap for the subtitle */
 }
 
-/* Responsive styles for the hero section on smaller screens (phones) */
 @media (max-width: 576px) {
+  /* Responsive styles for the hero section on smaller screens (phones) */
   #home .glass-card {
-    padding: 1.5rem; /* Reduce padding on smaller screens */
+    padding: 1.2rem; /* Make padding more compact on mobile */
   }
 
   #home .glass-card h1 {
     font-size: 2.4rem; /* Reduce font size to prevent wrapping */
+  }
+
+  .hero-text-container {
+    gap: 0.3rem; /* Reduce vertical gap on smaller screens */
   }
 
   .flipping-text-container {

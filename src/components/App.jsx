@@ -15,8 +15,11 @@ function App() {
     'a problem solver',
     'a team player',
     'a fast learner',
+    'a creative thinker',
+    'a scalable developer',
+    'a lifelong learner',
     'an AI enthusiast',
-    'a lifelong learner'
+    'a tech explorer'
   ];
 
   return (
