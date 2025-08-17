@@ -1,23 +1,31 @@
-import { useCallback } from 'react';
+import { useEffect } from 'react';
 
 /**
- * A hook that provides an event handler for a moving highlight effect on hover.
- * @returns {{onMouseMove: (e: React.MouseEvent) => void}}
+ * A hook that applies a highlight effect following the mouse on hover.
+ * @param {React.RefObject<HTMLElement>} elementRef
+ * @param {{enabled?: boolean}} options
  */
-export function useHighlightEffect() {
-  const handleMouseMove = useCallback((e) => {
-    const element = e.currentTarget;
-    const { left, top } = element.getBoundingClientRect();
-    const x = e.clientX - left;
-    const y = e.clientY - top;
+export const useHighlightEffect = (elementRef, { enabled = true }) => {
+  useEffect(() => {
+    const element = elementRef.current;
+    if (!element || !enabled) {
+      if (element) {
+        element.style.setProperty('--mouseX', '-1000px');
+        element.style.setProperty('--mouseY', '-1000px');
+      }
+      return;
+    }
 
-    // Pass mouse coordinates for the highlight effect
-    element.style.setProperty('--mouseX', `${x}px`);
-    element.style.setProperty('--mouseY', `${y}px`);
-  }, []);
+    const handleMouseMove = (e) => {
+      const { left, top } = element.getBoundingClientRect();
+      const x = e.clientX - left;
+      const y = e.clientY - top;
 
-  // No-op, but kept for consistent API if needed later
-  const handleMouseLeave = useCallback(() => {}, []);
+      element.style.setProperty('--mouseX', `${x}px`);
+      element.style.setProperty('--mouseY', `${y}px`);
+    };
 
-  return { onMouseMove: handleMouseMove, onMouseLeave: handleMouseLeave };
-}
+    element.addEventListener('mousemove', handleMouseMove);
+    return () => element.removeEventListener('mousemove', handleMouseMove);
+  }, [elementRef, enabled]);
+};

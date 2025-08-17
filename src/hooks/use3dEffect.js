@@ -1,31 +1,49 @@
-import { useCallback } from 'react';
+import { useEffect } from 'react';
 
 /**
- * A hook that provides event handlers for a 3D tilt and highlight effect on hover.
- * @param {number} hoverIntensity - The intensity of the tilt effect.
- * @returns {{onMouseMove: (e: React.MouseEvent) => void, onMouseLeave: (e: React.MouseEvent) => void}}
+ * A hook that applies a 3D tilt effect on hover.
+ * @param {React.RefObject<HTMLElement>} elementRef
+ * @param {{enabled?: boolean, hoverIntensity?: number}} options
  */
-export function use3dEffect(hoverIntensity = 10) {
-  const handleMouseMove = useCallback((e) => {
-    const element = e.currentTarget;
-    const { width, height, left, top } = element.getBoundingClientRect();
-    const x = e.clientX - left;
-    const y = e.clientY - top;
+export const use3dEffect = (elementRef, { enabled = true, hoverIntensity = 10 }) => {
+  useEffect(() => {
+    const element = elementRef.current;
+    if (!element || !enabled) {
+      // Reset styles if disabled while active
+      if (element) {
+        element.style.setProperty('--rotateX', '0deg');
+        element.style.setProperty('--rotateY', '0deg');
+      }
+      return;
+    }
 
-    const rotateX = -((y - height / 2) / (height / 2)) * hoverIntensity;
-    const rotateY = ((x - width / 2) / (width / 2)) * hoverIntensity;
+    const handleMouseMove = (e) => {
+      const { width, height, left, top } = element.getBoundingClientRect();
+      const x = e.clientX - left;
+      const y = e.clientY - top;
 
-    element.style.setProperty('--rotateX', `${rotateX}deg`);
-    element.style.setProperty('--rotateY', `${rotateY}deg`);
-    element.style.setProperty('--mouseX', `${x}px`);
-    element.style.setProperty('--mouseY', `${y}px`);
-  }, [hoverIntensity]);
+      const rotateX = -((y - height / 2) / (height / 2)) * hoverIntensity;
+      const rotateY = ((x - width / 2) / (width / 2)) * hoverIntensity;
 
-  const handleMouseLeave = useCallback((e) => {
-    const element = e.currentTarget;
-    element.style.setProperty('--rotateX', '0deg');
-    element.style.setProperty('--rotateY', '0deg');
-  }, []);
+      requestAnimationFrame(() => {
+        element.style.setProperty('--rotateX', `${rotateX}deg`);
+        element.style.setProperty('--rotateY', `${rotateY}deg`);
+      });
+    };
 
-  return { onMouseMove: handleMouseMove, onMouseLeave: handleMouseLeave };
-}
+    const handleMouseLeave = () => {
+      requestAnimationFrame(() => {
+        element.style.setProperty('--rotateX', '0deg');
+        element.style.setProperty('--rotateY', '0deg');
+      });
+    };
+
+    element.addEventListener('mousemove', handleMouseMove);
+    element.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      element.removeEventListener('mousemove', handleMouseMove);
+      element.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, [elementRef, enabled, hoverIntensity]);
+};

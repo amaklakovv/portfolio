@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Navbar.css';
 import { useHighlightEffect } from '../hooks/useHighlightEffect';
 
 function Navbar() {
-  const eventHandlers = useHighlightEffect();
+  const navRef = useRef(null);
+  useHighlightEffect(navRef, { enabled: true });
 
   return (
-    <nav className="navbar" {...eventHandlers}>
+    <nav ref={navRef} className="navbar">
       <div className="navbar-logo">
         <a href="#home">
           <span className="full-name">Andrew Maklakov</span>
