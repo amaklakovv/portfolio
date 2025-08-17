@@ -1,13 +1,13 @@
 import React from 'react';
 import GlassCard from './GlassCard';
-import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub, FaPaperPlane } from 'react-icons/fa';
 import './Contact.css';
 
 function Contact() {
   return (
     <section id="contact" className="fullscreen-section">
       <div className="section-wrapper">
-        <h2>Get In Touch</h2>
+        <h2><FaPaperPlane /> Get In Touch</h2>
         <GlassCard hoverIntensity={3}>
           <div className="contact-content">
             <p>

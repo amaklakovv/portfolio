@@ -2,13 +2,17 @@ import React from 'react';
 import GlassCard from './GlassCard';
 import './Projects.css';
 import { projects } from '../data/projectsData';
+import { BsFolderFill } from 'react-icons/bs';
+import { useOnScreen } from '../hooks/useOnScreen';
 
 function Projects() {
+  const [ref, isOnScreen] = useOnScreen({ threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
+
   return (
     <section id="projects" className="fullscreen-section">
       <div className="section-wrapper">
-        <h2>My Projects</h2>
-        <div className="projects-container">
+        <h2><BsFolderFill /> My Projects</h2>
+        <div ref={ref} className={`projects-container ${isOnScreen ? 'is-visible' : ''}`}>
           {projects.map((project) => (
             <GlassCard key={project.title} hoverIntensity={2}>
               <div className="project-card">

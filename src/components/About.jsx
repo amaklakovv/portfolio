@@ -1,6 +1,8 @@
 import React from 'react';
 import GlassCard from './GlassCard';
 import SkillCategory from './SkillCategory'; // Import the new component
+import { BsPersonFill } from 'react-icons/bs';
+import { useOnScreen } from '../hooks/useOnScreen';
 
 const languages = [
   'Java', 'C/C++', 'Python', 'HTML/CSS', 'JavaScript'
@@ -11,7 +13,7 @@ const toolsAndTech = [
 ];
 
 const methodologiesAndFrameworks = [
-  'Agile Development', 'Testing (JUnit)', 'Node.js/React', 'UX Design', 'AI', 'Machine Learning'
+  'Agile Development', 'Testing (JUnit)', 'Node.js', 'React', 'Phaser', 'UX Design', 'AI', 'Machine Learning'
 ];
 
 const softSkills = [
@@ -27,10 +29,12 @@ const personalInterests = [
 ];
 
 function About() {
+  const [interestsRef, interestsAreOnScreen] = useOnScreen({ threshold: 0.3 });
+
   return (
     <section id="about" className="fullscreen-section">
       <div className="section-wrapper">
-        <h2>About Me</h2>
+        <h2><BsPersonFill /> About Me</h2>
 
         {/* Consolidated Skills Card */}
         <GlassCard hoverIntensity={2} className="skills-main-card">
@@ -55,7 +59,7 @@ function About() {
           </GlassCard>
           <GlassCard hoverIntensity={2}>
             <h3>Personal Interests</h3>
-            <ul className="skills-list">
+            <ul ref={interestsRef} className={`skills-list ${interestsAreOnScreen ? 'is-visible' : ''}`}>
               {personalInterests.map(interest => <li key={interest}>{interest}</li>)}
             </ul>
           </GlassCard>
