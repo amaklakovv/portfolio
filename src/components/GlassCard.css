@@ -10,5 +10,13 @@
   color: white;
   /* Additions for the 3D effect */
   transform-style: preserve-3d;
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  /* Use CSS variables for transform values */
+  --rotateX: 0deg;
+  --rotateY: 0deg;
+  transform: perspective(1000px) rotateX(var(--rotateX)) rotateY(var(--rotateY));
+  transition: transform 0.1s linear; /* Use a faster, linear transition for mouse move */
+}
+
+.glass-card:hover {
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Slower transition on hover out */
 }

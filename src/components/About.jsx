@@ -1,5 +1,6 @@
 import React from 'react';
 import GlassCard from './GlassCard';
+import SkillCategory from './SkillCategory'; // Import the new component
 
 const languages = [
   'Java', 'C/C++', 'Python', 'HTML/CSS', 'JavaScript'
@@ -35,30 +36,10 @@ function About() {
         <GlassCard hoverIntensity={2} className="skills-main-card">
           <h3>Skills</h3>
           <div className="skills-grid-2x2">
-            <div className="skills-category">
-              <h4>Languages</h4>
-              <ul className="skills-list">
-                {languages.map(skill => <li key={skill}>{skill}</li>)}
-              </ul>
-            </div>
-            <div className="skills-category">
-              <h4>Tools & Technologies</h4>
-              <ul className="skills-list">
-                {toolsAndTech.map(skill => <li key={skill}>{skill}</li>)}
-              </ul>
-            </div>
-            <div className="skills-category">
-              <h4>Methodologies & Frameworks</h4>
-              <ul className="skills-list">
-                {methodologiesAndFrameworks.map(skill => <li key={skill}>{skill}</li>)}
-              </ul>
-            </div>
-            <div className="skills-category">
-              <h4>Soft Skills</h4>
-              <ul className="skills-list">
-                {softSkills.map(skill => <li key={skill}>{skill}</li>)}
-              </ul>
-            </div>
+            <SkillCategory title="Languages" skills={languages} />
+            <SkillCategory title="Tools & Technologies" skills={toolsAndTech} />
+            <SkillCategory title="Methodologies & Frameworks" skills={methodologiesAndFrameworks} />
+            <SkillCategory title="Soft Skills" skills={softSkills} />
           </div>
         </GlassCard>
 
