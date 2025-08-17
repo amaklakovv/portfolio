@@ -30,7 +30,7 @@ function GlassCard({
   useDeviceOrientationEffect(cardRef, { enabled: isMotionEnabled });
 
   return (
-    <div ref={cardRef} className={`glass-card ${className}`}>
+    <div ref={cardRef} className={`glass-card ${className} ${isMotionEnabled ? 'motion-enabled' : ''}`}>
       {children}
     </div>
   );

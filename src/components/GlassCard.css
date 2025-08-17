@@ -19,6 +19,12 @@
   transition: transform 0.1s linear; /* Use a faster, linear transition for mouse move */
 }
 
+.glass-card.motion-enabled {
+  /* When JS is handling the animation via requestAnimationFrame,
+     we disable the CSS transition to prevent conflicts and stuttering. */
+  transition: none;
+}
+
 .glass-card:hover {
   transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Slower transition on hover out */
 }
