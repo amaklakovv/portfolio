@@ -82,7 +82,7 @@
 @media (max-width: 576px) {
   /* Responsive styles for the hero section on smaller screens (phones) */
   #home .glass-card {
-    padding: 1.2rem; /* Make padding more compact on mobile */
+    padding: 0.8rem; /* Make padding more compact on mobile */
   }
 
   #home .glass-card h1 {
