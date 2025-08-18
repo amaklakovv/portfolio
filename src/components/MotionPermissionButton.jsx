@@ -29,7 +29,7 @@ function MotionPermissionButton({ onGrant }) {
   return (
     <button className="motion-button" onClick={handleClick} disabled={status === 'requesting'}>
       <MdScreenRotation />
-      <span>Experience Motion</span>
+      {/* <span>Experience Motion</span> */}
     </button>
   );
 }
