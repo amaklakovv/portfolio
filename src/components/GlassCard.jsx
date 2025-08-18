@@ -13,7 +13,8 @@ import { useDeviceOrientationEffect } from '../hooks/useDeviceOrientationEffect'
  *   children: React.ReactNode,
  *   className?: string,
  *   hoverIntensity?: number,
- *   isMotionEnabled?: boolean
+ *   isMotionEnabled?: boolean,
+ *   style?: React.CSSProperties
  * }} props
  */
 function GlassCard({
@@ -21,6 +22,7 @@ function GlassCard({
   className = '',
   hoverIntensity = 10,
   isMotionEnabled = false,
+  style,
 }) {
   const cardRef = useRef(null);
 
@@ -30,7 +32,11 @@ function GlassCard({
   useDeviceOrientationEffect(cardRef, { enabled: isMotionEnabled });
 
   return (
-    <div ref={cardRef} className={`glass-card ${className} ${isMotionEnabled ? 'motion-enabled' : ''}`}>
+    <div
+      ref={cardRef}
+      className={`glass-card ${className} ${isMotionEnabled ? 'motion-enabled' : ''}`}
+      style={style}
+    >
       {children}
     </div>
   );

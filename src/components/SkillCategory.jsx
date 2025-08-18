@@ -8,7 +8,9 @@ function SkillCategory({ title, skills }) {
     <div className="skills-category">
       <h4>{title}</h4>
       <ul ref={ref} className={`skills-list ${isOnScreen ? 'is-visible' : ''}`}>
-        {skills.map(skill => <li key={skill}>{skill}</li>)}
+        {skills.map((skill, index) => (
+          <li key={skill} style={{ '--stagger-index': index + 1 }}>{skill}</li>
+        ))}
       </ul>
     </div>
   );

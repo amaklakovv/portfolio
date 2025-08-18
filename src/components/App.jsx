@@ -36,10 +36,10 @@ function App() {
             <h1>Andrew Maklakov</h1>
             <FlippingText phrases={heroPhrases} />
           </div>
+          {!isMotionEnabled && (
+            <MotionPermissionButton onGrant={() => setIsMotionEnabled(true)} />
+          )}
         </GlassCard>
-        {!isMotionEnabled && (
-          <MotionPermissionButton onGrant={() => setIsMotionEnabled(true)} />
-        )}
       </section>
       <About />
       <Projects />

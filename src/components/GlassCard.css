@@ -7,7 +7,6 @@
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
   position: relative; /* Required for the pseudo-element */
-  overflow: hidden;   /* Hides the highlight when it goes outside the card */
   padding: 2rem;
   color: white;
   /* Additions for the 3D effect */
@@ -48,6 +47,7 @@
   opacity: 0;
   transition: opacity 0.4s ease-out, transform 0s; /* Added transform to prevent transition on z-index change */
   z-index: -1; /* Position the highlight behind the content */
+  border-radius: inherit; /* Match the card's border radius */
 }
 
 /* Make the highlight visible on hover */
