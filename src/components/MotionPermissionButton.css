@@ -1,6 +1,9 @@
 .motion-button {
   display: none; /* Hidden by default, shown via media query */
-  margin-top: 2rem;
+  position: absolute;
+  bottom: 12.5rem; /* Adjust this value to move the button up or down */
+  left: 50%;
+  transform: translateX(-50%);
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
@@ -17,13 +20,13 @@
 
 .motion-button:hover {
   background-color: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
+  transform: translateX(-50%) translateY(-2px);
 }
 
 .motion-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  transform: none;
+  transform: translateX(-50%);
 }
 
 /* Show the button only on mobile devices (tablets and below) */
