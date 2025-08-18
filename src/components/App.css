@@ -87,7 +87,8 @@
   }
 
   #home .glass-card h1 {
-    font-size: 2.4rem; /* Reduce font size to prevent wrapping */
+    /* Fluidly scale font size on smaller screens to prevent wrapping */
+    font-size: clamp(2rem, 1.5rem + 2.5vw, 2.4rem);
   }
 
   .hero-text-container {
@@ -95,7 +96,8 @@
   }
 
   .flipping-text-container {
-    font-size: 1rem; /* Reduce font size for the subtitle */
+    /* Fluidly scale font size for the subtitle */
+    font-size: clamp(0.85rem, 0.6625rem + 0.9375vw, 1rem);
   }
 }
 
