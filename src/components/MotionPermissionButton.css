@@ -1,7 +1,7 @@
 .motion-button {
   display: none; /* Hidden by default, shown via media query */
   position: absolute;
-  bottom: 12.5rem; /* Adjust this value to move the button up or down */
+  bottom: 10rem; /* Adjust this value to move the button up or down */
   left: 50%;
   transform: translateX(-50%);
   padding: 0.75rem 1.5rem;
