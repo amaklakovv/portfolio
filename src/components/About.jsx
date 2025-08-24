@@ -5,19 +5,19 @@ import { BsPersonFill } from 'react-icons/bs';
 import { useOnScreen } from '../hooks/useOnScreen';
 
 const languages = [
-  'Java', 'C/C++', 'Python', 'HTML/CSS', 'JavaScript'
+  'Java', 'C/C++', 'Python', 'JavaScript', 'HTML/CSS', 'PHP'
 ];
 
 const toolsAndTech = [
-  'AWS', 'Git', 'Docker', 'Unreal Engine 5', 'MySQL'
+  'AWS (EC2, S3, Lambda)', 'Git (Branching PRs, CI/CD)', 'Docker', 'Unreal Engine 5', 'MySQL', 'APIs', 'WebSockets'
 ];
 
 const methodologiesAndFrameworks = [
-  'Agile Development', 'Testing (JUnit)', 'Node.js', 'React', 'Phaser', 'UX Design', 'AI', 'Machine Learning'
+  'Agile Development', 'Testing (JUnit, Integration, E2E)', 'Node.js/Express', 'React', 'Full-Stack Development', 'UX Design/Testing', 'Machine Learning', 'AI'
 ];
 
 const softSkills = [
-  'Leadership', 'Teamwork', 'Problem Solving', 'Communication', 'Project Management', 'Public Speaking'
+  'Leadership', 'Teamwork', 'Problem Solving', 'Communication', 'Project Management', 'E2E Feature Development', 'Collaborative Codebase Contributions', 'Public Speaking'
 ];
 
 const personalInterests = [
@@ -68,6 +68,9 @@ function About() {
         {/* Summary Card */}
         <GlassCard hoverIntensity={3} className="summary-card">
           <h3>Summary</h3>
+          <p>
+            Currently looking for tech-related work experience or an internship for Summer 2025, looking to apply both technical knowledge and interpersonal skills to gain valuable industry experience.
+          </p>
           <p>
             I've always had a hands-on approach to problem-solving, which all started with a simple coding project nearly a decade ago. 
             That first experience kicked off my journey of learning and discovery in the tech world.
