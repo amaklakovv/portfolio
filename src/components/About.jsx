@@ -1,24 +1,8 @@
 import React from 'react';
 import GlassCard from './GlassCard';
-import SkillCategory from './SkillCategory'; // Import the new component
+import SkillsTabs from './SkillsTabs'; // Import the new SkillsTabs component
 import { BsPersonFill } from 'react-icons/bs';
 import { useOnScreen } from '../hooks/useOnScreen';
-
-const languages = [
-  'Java', 'C/C++', 'Python', 'JavaScript', 'HTML/CSS', 'PHP'
-];
-
-const toolsAndTech = [
-  'AWS (EC2, S3, Lambda)', 'Git (Branching PRs, CI/CD)', 'Docker', 'Unreal Engine 5', 'MySQL', 'APIs', 'WebSockets'
-];
-
-const methodologiesAndFrameworks = [
-  'Agile Development', 'Testing (JUnit, Integration, E2E)', 'Node.js/Express', 'React', 'Full-Stack Development', 'UX Design/Testing', 'Machine Learning', 'AI'
-];
-
-const softSkills = [
-  'Leadership', 'Teamwork', 'Problem Solving', 'Communication', 'Project Management', 'E2E Feature Development', 'Collaborative Codebase Contributions', 'Public Speaking'
-];
 
 const personalInterests = [
   'Fitness & Weightlifting',
@@ -36,16 +20,7 @@ function About() {
       <div className="section-wrapper">
         <h2><BsPersonFill /> About Me</h2>
 
-        {/* Consolidated Skills Card */}
-        <GlassCard hoverIntensity={2} className="skills-main-card">
-          <h3>Skills</h3>
-          <div className="skills-grid-2x2">
-            <SkillCategory title="Languages" skills={languages} />
-            <SkillCategory title="Tools & Technologies" skills={toolsAndTech} />
-            <SkillCategory title="Methodologies & Frameworks" skills={methodologiesAndFrameworks} />
-            <SkillCategory title="Soft Skills" skills={softSkills} />
-          </div>
-        </GlassCard>
+        <SkillsTabs />
 
         {/* Container for Education and Personal Interests */}
         <div className="about-cards-container">
