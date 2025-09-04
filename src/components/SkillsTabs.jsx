@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import GlassCard from './GlassCard';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { BsCodeSlash, BsTools, BsGearFill, BsPeopleFill } from 'react-icons/bs';
@@ -43,8 +43,21 @@ const SkillsList = ({ skills }) => {
 
 export const SkillsTabs = () => {
   const [activeCategory, setActiveCategory] = useState(skillsConfig[0].name);
+  const contentContainerRef = useRef(null); // The element that will be animated
+  const contentWrapperRef = useRef(null);   // The element whose height we measure
 
   const activeSkills = skillsConfig.find(cat => cat.name === activeCategory)?.skills || [];
+
+  // Smoothly animates the height of the container when the content changes
+  useLayoutEffect(() => {
+    const containerEl = contentContainerRef.current;
+    const wrapperEl = contentWrapperRef.current;
+    if (containerEl && wrapperEl) {
+      // Set container height to the measured height of the inner wrapper, the inner wrapper always has the correct auto height of its content
+      containerEl.style.height = `${wrapperEl.clientHeight}px`;
+    }
+    // Rerun this effect whenever the active skills change
+  }, [activeSkills]);
 
   return (
     <GlassCard className="skills-main-card" hoverIntensity={2}>
@@ -62,11 +75,13 @@ export const SkillsTabs = () => {
             </button>
           ))}
         </div>
-        <div className="skills-list-content">
+        <div ref={contentContainerRef} className="skills-list-content">
+          <div ref={contentWrapperRef}>
             {/*
-              Tells React to create a new instance of SkillsList whenever the activeCategory changes.
+              Tells React to create a new instance of SkillsList whenever the activeCategory changes
             */}
             <SkillsList key={activeCategory} skills={activeSkills} />
+          </div>
         </div>
       </div>
     </GlassCard>

@@ -24,7 +24,7 @@ function About() {
 
         {/* Container for Education and Personal Interests */}
         <div className="about-cards-container">
-          <GlassCard hoverIntensity={2}>
+          <GlassCard hoverIntensity={2} className="education-card">
             <h3>Education</h3>
             <div className="education-entry">
               <h4>Bachelor of Engineering (Honours) in Software Engineering</h4>

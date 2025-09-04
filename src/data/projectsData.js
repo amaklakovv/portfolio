@@ -16,7 +16,7 @@ export const projects = [
   {
     title: 'AI Chrome Extension',
     description: 'Engineered a Chrome extension that automatically processes and summarises Gmail inbox content using AI. Uses a secure FastAPI backend with AI integration and implemented OAuth2 authentication for Gmail access.',
-    tags: ['APIs', 'Python', 'JavaScript', 'Chrome Extensions', 'AI', 'Problem Solving'],
+    tags: ['APIs', 'Python', 'JavaScript', 'Chrome Extensions', 'Problem Solving'],
     liveUrl: null,
     githubUrl: 'https://github.com/amaklakovv/email-extension'
   },
