@@ -14,6 +14,13 @@ export const projects = [
     githubUrl: null
   },
   {
+    title: 'AI Chrome Extension',
+    description: 'Engineered a Chrome extension that automatically processes and summarises Gmail inbox content using AI. Uses a secure FastAPI backend with AI integration and implemented OAuth2 authentication for Gmail access.',
+    tags: ['APIs', 'Python', 'JavaScript', 'Chrome Extensions', 'AI', 'Problem Solving'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/amaklakovv/email-extension'
+  },
+  {
     title: 'Code Collaborator App',
     description: 'Built a real-time collaborative code editor with live typing, shared rooms, and typing indicators. Engineered frontend using React and Monaco Editor, backend in FastAPI handling WebSocket sync.',
     tags: ['Python', 'WebSockets', 'React', 'JavaScript'],
