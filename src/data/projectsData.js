@@ -10,14 +10,14 @@ export const projects = [
     title: 'Code Catchers',
     description: 'Overseeing Agile sprints and stand-ups, assisting in coordinating a six-person team across design, development, and testing. Developed scalable backend/frontend logic, Live Multiplayer, UI features, contributing to improved game retention metrics.',
     tags: ['JavaScript', 'Project Management', 'Teamwork', 'Agile', 'Node.js', 'Phaser'],
-    liveUrl: null,
+    liveUrl: 'https://code-catchers.onrender.com',
     githubUrl: null
   },
   {
     title: 'AI Chrome Extension',
     description: 'Engineered a Chrome extension that automatically processes and summarises Gmail inbox content using AI. Uses a secure FastAPI backend with AI integration and implemented OAuth2 authentication for Gmail access.',
     tags: ['APIs', 'Python', 'JavaScript', 'Chrome Extensions', 'Problem Solving'],
-    liveUrl: null,
+    liveUrl: 'https://www.youtube.com/watch?v=xR5xCEttZbI',
     githubUrl: 'https://github.com/amaklakovv/email-extension'
   },
   {
