@@ -44,22 +44,7 @@ function About() {
         <GlassCard hoverIntensity={3} className="summary-card">
           <h3>Summary</h3>
           <p>
-            Currently looking for tech-related work experience or an internship for Summer 2025, looking to apply both technical knowledge and interpersonal skills to gain valuable industry experience.
-          </p>
-          <p>
-            I've always had a hands-on approach to problem-solving, which all started with a simple coding project nearly a decade ago. 
-            That first experience kicked off my journey of learning and discovery in the tech world.
-          </p>
-
-          <p>
-            I enjoy the opportunity to dive into in both team and solo projects, always working toward practical and impactful results. 
-            I enjoy collaborating with others, asking thought-provoking questions, and creating innovative solutions that fill gaps and add real value, 
-            making me motivated and resourceful.
-          </p>
-
-          <p>
-            I always take on a challenge, focusing on finding real, effective solutions. I use tools, mentors, and peer collaboration to stay productive and knowledgeable. 
-            Growing my skill set through this is something I plan to keep doing.
+            Nearly a decade of hands-on problem-solving in tech. I enjoy collaborating, questioning, and creating innovative solutions that add real value. I thrive on practical, impactful projects, whether solo or with a team. Always learning and up for a challenge. I leverage tools, mentors, and peers to grow my skills and achieve effective results.
           </p>
         </GlassCard>
       </div>
