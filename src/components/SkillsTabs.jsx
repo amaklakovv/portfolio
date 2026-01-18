@@ -77,9 +77,6 @@ export const SkillsTabs = () => {
         </div>
         <div ref={contentContainerRef} className="skills-list-content">
           <div ref={contentWrapperRef}>
-            {/*
-              Tells React to create a new instance of SkillsList whenever the activeCategory changes
-            */}
             <SkillsList key={activeCategory} skills={activeSkills} />
           </div>
         </div>

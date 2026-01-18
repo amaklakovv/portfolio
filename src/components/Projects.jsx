@@ -11,7 +11,7 @@ function Projects() {
   return (
     <section id="projects" className="fullscreen-section">
       <div className="section-wrapper">
-        <h2><BsFolderFill /> My Projects</h2>
+        <h2><BsFolderFill />My Projects</h2>
         <div ref={ref} className={`projects-container ${isOnScreen ? 'is-visible' : ''}`}>
           {projects.map((project, index) => (
             <GlassCard key={project.title} hoverIntensity={2} style={{ '--stagger-index': index + 1 }}>

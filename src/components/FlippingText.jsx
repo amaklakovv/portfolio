@@ -16,14 +16,13 @@ function FlippingText({ phrases, period = 3000 }) {
     setAnimationClass('in');
 
     const intervalId = setInterval(() => {
-      setAnimationClass('out'); // Trigger the flip out animation
+      setAnimationClass('out');
     }, period);
 
     return () => clearInterval(intervalId);
   }, [phrases, period]);
 
   const handleAnimationEnd = () => {
-    // After the 'out' animation finishes, update the text and trigger the 'in' animation
     if (animationClass === 'out') {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % phrases.length);
       setAnimationClass('in');

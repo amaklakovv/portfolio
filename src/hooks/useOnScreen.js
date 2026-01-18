@@ -9,7 +9,6 @@ export function useOnScreen(options) {
       // Update state when element is in view
       if (entry.isIntersecting) {
         setIsOnScreen(true);
-        // Optional: stop observing after it's visible once
         observer.unobserve(entry.target);
       }
     }, options);

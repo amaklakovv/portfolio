@@ -1,15 +1,13 @@
 .footer {
-  /* Full-width glassmorphism style */
   background: rgba(30, 30, 40, 0.75);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-  /* Full-width layout */
   width: 100%;
-  margin-top: 6rem; /* Give it space from the contact section */
-  padding: 2rem 5%; /* Use percentage for responsive padding */
+  margin-top: 6rem;
+  padding: 2rem 5%;
   box-sizing: border-box;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -20,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  flex-wrap: wrap;
   gap: 1rem;
 }
 

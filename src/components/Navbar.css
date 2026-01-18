@@ -1,28 +1,26 @@
 .navbar {
   position: fixed;
-  top: 20px; /* Give it some breathing room from the top edge */
+  top: 20px;
   left: 50%;
-  /* transform is now handled by the 3D effect styles below */
   width: 90%;
-  max-width: 1500px; /* Set a max-width for larger screens */
+  max-width: 1500px;
   padding: 1rem 2rem;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000; /* Ensure it stays on top of other content */
+  z-index: 1000;
 
   /* Glassmorphism Effect */
-  background: rgba(30, 30, 40, 0.75); /* A slightly darker glass */
+  background: rgba(30, 30, 40, 0.75);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   
-  /* Restore centering transform and remove 3D effects */
   transform: translateX(-50%);
-  transition: all 0.3s ease; /* Add a generic transition for other potential hover effects */
+  transition: all 0.3s ease;
 }
 
 .navbar::before {
@@ -34,14 +32,14 @@
   height: 100%;
   background: radial-gradient(
     400px circle at var(--mouseX) var(--mouseY),
-    rgba(255, 255, 255, 0.08), /* More subtle highlight */
+    rgba(255, 255, 255, 0.08),
     transparent 70%
   );
   opacity: 0;
   transition: opacity 0.5s ease-out;
-  z-index: -1; /* Place highlight behind navbar content */
-  border-radius: 16px; /* Match parent's border-radius */
-  pointer-events: none; /* Ensure the pseudo-element doesn't capture mouse events */
+  z-index: -1;
+  border-radius: 16px;
+  pointer-events: none;
 }
 
 .navbar:hover::before {
@@ -85,7 +83,6 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .full-name {
     display: none;
@@ -96,16 +93,16 @@
   }
 
   .navbar {
-    padding: 0.75rem 1rem; /* Tighter padding for mobile */
+    padding: 0.75rem 1rem;
   }
 
   .navbar-links {
-    flex-grow: 1; /* Allow the links container to grow and fill space */
+    flex-grow: 1;
     justify-content: space-evenly; 
     gap: 0;
   }
 
   .navbar-links a {
-    padding: 0.5rem; /* Reduce padding on individual links */
+    padding: 0.5rem;
   }
 }

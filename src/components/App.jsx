@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import About from './About';
 import Contact from './Contact';
 import Footer from './Footer';
+import WorkExperience from './WorkExperience';
 import Projects from './Projects';
 import FlippingText from './FlippingText';
 
@@ -14,7 +15,7 @@ function App() {
   const [isMotionEnabled, setIsMotionEnabled] = useState(false);
 
   const heroPhrases = [
-    'a third year engineering student',
+    'a final year engineering student',
     'a software engineering major',
     'a problem solver',
     'a team player',
@@ -29,7 +30,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* Hero Section */}
       <section id="home" className="fullscreen-section">
         <GlassCard isMotionEnabled={isMotionEnabled}>
           <div className="hero-text-container">
@@ -42,6 +42,7 @@ function App() {
         </GlassCard>
       </section>
       <About />
+      <WorkExperience />
       <Projects />
       <Contact />
       <Footer />

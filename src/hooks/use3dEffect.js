@@ -9,7 +9,6 @@ export const use3dEffect = (elementRef, { enabled = true, hoverIntensity = 10 })
   useEffect(() => {
     const element = elementRef.current;
     if (!element || !enabled) {
-      // Reset styles if disabled while active
       if (element) {
         element.style.setProperty('--rotateX', '0deg');
         element.style.setProperty('--rotateY', '0deg');

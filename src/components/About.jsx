@@ -1,6 +1,6 @@
 import React from 'react';
 import GlassCard from './GlassCard';
-import SkillsTabs from './SkillsTabs'; // Import the new SkillsTabs component
+import SkillsTabs from './SkillsTabs';
 import { BsPersonFill } from 'react-icons/bs';
 import { useOnScreen } from '../hooks/useOnScreen';
 
@@ -39,8 +39,7 @@ function About() {
             </ul>
           </GlassCard>
         </div>
-
-        {/* Summary Card */}
+        
         <GlassCard hoverIntensity={3} className="summary-card">
           <h3>Summary</h3>
           <p>

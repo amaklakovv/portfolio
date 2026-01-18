@@ -31,18 +31,16 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  /* Using your preferred color palette for a subtle animation */
   background: linear-gradient(-45deg, #111827, #1f2937, #374151, #111827);
   background-size: 400% 400%;
   animation: gradient-animation 20s ease infinite;
 }
 
-/* This class is global and defines the sections */
 .fullscreen-section {
   display: grid;
   place-items: center;
-  min-height: 85vh; /* Less than full screen to hint at more content */
-  margin: 10vh auto; /* Vertical margin to create space between sections */
+  min-height: 85vh;
+  margin: 10vh auto;
   text-align: center;
-  scroll-margin-top: 120px; /* Offset for the fixed navbar */
+  scroll-margin-top: 120px;
 }

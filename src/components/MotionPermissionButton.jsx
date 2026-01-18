@@ -3,7 +3,7 @@ import './MotionPermissionButton.css';
 import { MdScreenRotation } from 'react-icons/md';
 
 function MotionPermissionButton({ onGrant }) {
-  const [status, setStatus] = useState('idle'); // 'idle', 'requesting', 'denied'
+  const [status, setStatus] = useState('idle');
 
   const handleClick = async () => {
     // This is the iOS-specific API
@@ -21,7 +21,6 @@ function MotionPermissionButton({ onGrant }) {
         setStatus('denied');
       }
     } else {
-      // For non-iOS browsers, permission is usually granted by default.
       onGrant();
     }
   };
@@ -29,7 +28,6 @@ function MotionPermissionButton({ onGrant }) {
   return (
     <button className="motion-button" onClick={handleClick} disabled={status === 'requesting'}>
       <MdScreenRotation />
-      {/* <span>Experience Motion</span> */}
     </button>
   );
 }

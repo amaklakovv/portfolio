@@ -6,29 +6,24 @@
   -webkit-backdrop-filter: blur(7px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
-  position: relative; /* Required for the pseudo-element */
+  position: relative; 
   padding: 2rem;
   color: white;
-  /* Additions for the 3D effect */
   transform-style: preserve-3d;
-  /* Use CSS variables for transform values */
   --rotateX: 0deg;
   --rotateY: 0deg;
   transform: perspective(1000px) rotateX(var(--rotateX)) rotateY(var(--rotateY));
-  transition: transform 0.1s linear; /* Use a faster, linear transition for mouse move */
+  transition: transform 0.1s linear; 
 }
 
 .glass-card.motion-enabled {
-  /* When JS is handling the animation via requestAnimationFrame,
-     we disable the CSS transition to prevent conflicts and stuttering. */
   transition: none;
 }
 
 .glass-card:hover {
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Slower transition on hover out */
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); 
 }
 
-/* This pseudo-element creates the moving highlight effect */
 .glass-card::before {
   content: "";
   position: absolute;
@@ -36,21 +31,18 @@
   left: 0;
   width: 100%;
   height: 100%;
-
-  /* A soft, circular gradient that acts as a light source */
   background: radial-gradient(
     300px circle at var(--mouseX) var(--mouseY),
-    rgba(255, 255, 255, 0.10), /* Made highlight more subtle */
+    rgba(255, 255, 255, 0.10),
     transparent 80%
   );
 
   opacity: 0;
-  transition: opacity 0.4s ease-out, transform 0s; /* Added transform to prevent transition on z-index change */
-  z-index: -1; /* Position the highlight behind the content */
-  border-radius: inherit; /* Match the card's border radius */
+  transition: opacity 0.4s ease-out, transform 0s;
+  z-index: -1;
+  border-radius: inherit;
 }
 
-/* Make the highlight visible on hover */
 .glass-card:hover::before {
   opacity: 1;
 }

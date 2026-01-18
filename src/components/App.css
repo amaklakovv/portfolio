@@ -1,4 +1,3 @@
-/* Give sections more breathing room for a cleaner look */
 .fullscreen-section {
   padding-top: 0;
   padding-bottom: 1rem;
@@ -8,17 +7,10 @@
   min-height: 80vh;
 }
 
-/* Offset for the fixed navbar when scrolling to a section */
 #home, #about, #projects, #contact {
   scroll-margin-top: 80px;
 }
 
-
-.App {
-  /* The App is now just a container for the sections */
-}
-
-/* A reusable wrapper for consistent section layout */
 .section-wrapper {
   width: 90%;
   max-width: 1200px;
@@ -35,20 +27,16 @@
   gap: 0.8rem;
 }
 
-/* Make icon slightly smaller than the text and remove positioning hacks */
 .section-wrapper h2 svg {  
   font-size: 2.0rem;
 }
 
-/* The Projects and Contact icons are wider, so we make them a bit smaller
-   to match the perceived visual weight of the About Me icon */
 #contact .section-wrapper h2 svg {
   font-size: 1.8rem;
 }
 
 /* Section-Specific Card Sizing */
 
-/* Business card style for the hero section */
 #home .glass-card {
   max-width: 500px;
   width: 90%;
@@ -62,28 +50,24 @@
   gap: 0.8rem;
 }
 
-/* Increase font sizes for the hero section card */
 #home .glass-card h1 {
   font-size: 2.75rem;
   margin: 0;
 }
 
-/* Container for the hero text to ensure left-alignment within a centered block */
 .hero-text-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Left-aligns the h1 and FlippingText */
+  align-items: flex-start;
   gap: 0.5rem;
 }
 
 @media (max-width: 576px) {
-  /* Responsive styles for the hero section on smaller screens (phones) */
   #home .glass-card {
     padding: 0.8rem;
   }
 
   #home .glass-card h1 {
-    /* Fluidly scale font size on smaller screens to prevent wrapping */
     font-size: clamp(2rem, 1.5rem + 2.5vw, 2.4rem);
   }
 
@@ -96,7 +80,6 @@
   }
 }
 
-/* Specific styling for the summary card in the About section */
 .summary-card {
   padding: 2.5rem 3rem;
   text-align: left;
@@ -105,7 +88,6 @@
   gap: 0.5rem;
 }
 
-/* Style for the heading within the summary card */
 .summary-card h3 {
   font-size: 1.75rem;
   margin: 0;
@@ -116,7 +98,6 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Main Skills Card */
 .skills-main-card {
   margin-bottom: 3rem;
   padding: 2.5rem;
@@ -132,7 +113,6 @@
   text-align: left;
 }
 
-/* Skills Tabs */
 .skills-tabs-container {
   display: flex;
   flex-direction: column;
@@ -180,13 +160,10 @@
 }
 
 .skills-list-content {
-  /* Height is set dynamically by the SkillsTabs component */
-  /* Transition makes the height change smooth */
   transition: height 0.35s ease-in-out;
-  overflow: hidden; /* Prevents content from overflowing during the transition */
+  overflow: hidden;
 }
 
-/* Container for Education and Personal Interests cards */
 .about-cards-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -212,7 +189,6 @@
   color: white;
 }
 
-/* For smaller screens, stack the cards into a single column for readability */
 @media (max-width: 992px) {
   .about-cards-container {
     grid-template-columns: 1fr;
@@ -248,7 +224,6 @@
 .skills-list.is-visible li {
   opacity: 1;
   transform: translateY(0px);
-  /* CSS variable for staggered delay. Cleaner than nth-child rules. */
   transition-delay: calc(var(--stagger-index) * 75ms);
 }
 
