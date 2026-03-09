@@ -7,7 +7,7 @@ const skillsConfig = [
   {
     name: "Languages",
     icon: <BsCodeSlash className="skill-tab-icon" />,
-    skills: ["Java", "C#", "React", "C/C++", "Python", "JavaScript", "TypeScript", "PHP", "SQL"]
+    skills: ["Java", "C#", "C/C++", "Python", "JavaScript", "TypeScript", "PHP", "SQL"]
   },
   {
     name: "Tools & Tech",
