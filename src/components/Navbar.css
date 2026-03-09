@@ -74,22 +74,32 @@
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-links a:hover {
   color: white;
-  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 878px) {
   .full-name {
     display: none;
   }
 
   .short-name {
     display: inline;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    display: none;
+  }
+
+  .full-name {
+    display: none;
   }
 
   .navbar {

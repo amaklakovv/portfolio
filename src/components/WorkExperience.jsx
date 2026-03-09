@@ -3,17 +3,7 @@ import GlassCard from './GlassCard';
 import { BsBriefcaseFill } from 'react-icons/bs';
 import { useOnScreen } from '../hooks/useOnScreen';
 import './WorkExperience.css';
-
-const experienceData = [
-  {
-    title: "Engineer Intern",
-    company: "Upstock",
-    companyUrl: "https://www.upstock.app/",
-    date: "Nov 2025 - Present",
-    description: "Description TBC",
-    tags: ["React", "TypeScript", "C# + .NET", "Docker", "SQL", "Git", "Agile"]
-  }
-];
+import { experienceData } from '../data/workExperienceData';
 
 function Experience() {
   const [ref, isOnScreen] = useOnScreen({ threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
@@ -39,8 +29,12 @@ function Experience() {
                 </div>
                 <p className="experience-date">{job.date}</p>
                 <p className="experience-description">{job.description}</p>
-                <ul className="skills-list is-visible">
-                  {job.tags.map(tag => <li key={tag}>{tag}</li>)}
+                <ul className={`skills-list ${isOnScreen ? 'is-visible' : ''}`}>
+                  {job.tags.map((tag, tagIndex) => (
+                    <li key={tag} style={{ '--stagger-index': tagIndex }}>
+                      {tag}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </GlassCard>

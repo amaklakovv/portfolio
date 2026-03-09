@@ -9,6 +9,7 @@ const personalInterests = [
   'Competitive Swimming',
   'Exploring New Tech',
   'Building Side Projects',
+  'Entrepreneurship',
   'Volunteering'
 ];
 
@@ -43,7 +44,7 @@ function About() {
         <GlassCard hoverIntensity={3} className="summary-card">
           <h3>Summary</h3>
           <p>
-            Nearly a decade of hands-on problem-solving in tech. I enjoy collaborating, questioning, and creating innovative solutions that add real value. I thrive on practical, impactful projects, whether solo or with a team. Always learning and up for a challenge. I leverage tools, mentors, and peers to grow my skills and achieve effective results.
+            Years of hands-on problem-solving in tech. I enjoy collaborating, questioning, and creating innovative solutions that add real value. I thrive on practical, impactful projects, whether solo or with a team. Always learning and up for a challenge. I leverage tools, mentors, and peers to grow my skills and achieve effective results.
           </p>
         </GlassCard>
       </div>

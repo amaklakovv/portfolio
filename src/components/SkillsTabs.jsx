@@ -7,17 +7,17 @@ const skillsConfig = [
   {
     name: "Languages",
     icon: <BsCodeSlash className="skill-tab-icon" />,
-    skills: ["Java", "C/C++", "Python", "JavaScript", "HTML/CSS", "PHP"]
+    skills: ["Java", "C#", "React", "C/C++", "Python", "JavaScript", "TypeScript", "PHP", "SQL"]
   },
   {
     name: "Tools & Tech",
     icon: <BsTools className="skill-tab-icon" />,
-    skills: ["AWS (EC2, S3, Lambda)", "Git (Branching PRs, CI/CD)", "Docker", "Unreal Engine 5", "MySQL", "APIs", "WebSockets"]
+    skills: ["AWS (EC2, S3, Lambda)", "Git (Branching, PRs, CI/CD)", "Docker", "Unreal Engine 5", "MySQL", "APIs", "WebSockets"]
   },
   {
     name: "Frameworks & Methodologies",
     icon: <BsGearFill className="skill-tab-icon" />,
-    skills: ["Agile Development", "Testing (JUnit, Integration, E2E)", "Node.js/Express", "React", "Full-Stack Development", "UX Design/Testing", "Machine Learning", "AI"]
+    skills: ["Agile Development", "Testing (JUnit, Integration, E2E)", ".NET", "Node.js/Express", "React", "Full-Stack Development", "UX Design/Testing", "Machine Learning", "AI"]
   },
   {
     name: "Soft Skills",
