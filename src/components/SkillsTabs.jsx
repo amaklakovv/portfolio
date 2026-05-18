@@ -2,12 +2,13 @@ import React, { useState, useLayoutEffect, useRef } from 'react';
 import GlassCard from './GlassCard';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { BsCodeSlash, BsTools, BsGearFill, BsPeopleFill } from 'react-icons/bs';
+import { trackButtonClick } from '../analytics';
 
 const skillsConfig = [
   {
     name: "Languages",
     icon: <BsCodeSlash className="skill-tab-icon" />,
-    skills: ["Java", "C#", "C/C++", "Python", "JavaScript", "TypeScript", "PHP", "SQL"]
+    skills: ["Java", "C#", "C/C++", "Python", "JavaScript", "TypeScript", "PHP", "SQL", "Linux"]
   },
   {
     name: "Tools & Tech",
@@ -68,7 +69,10 @@ export const SkillsTabs = () => {
             <button
               key={category.name}
               className={`skill-tab-button ${activeCategory === category.name ? 'active' : ''}`}
-              onClick={() => setActiveCategory(category.name)}
+              onClick={() => {
+                setActiveCategory(category.name);
+                trackButtonClick(`Skills tab: ${category.name}`);
+              }}
             >
               {category.icon}
               <span>{category.name}</span>

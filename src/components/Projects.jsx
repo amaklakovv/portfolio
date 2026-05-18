@@ -23,12 +23,28 @@ function Projects() {
                 </div>
                 <div className="project-links">
                   {project.liveUrl ? (
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">Live Demo</a>
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-analytics-label={`${project.title} Live Demo`}
+                      data-analytics-category="link"
+                    >
+                      Live Demo
+                    </a>
                   ) : (
                     <span className="project-link-disabled">Demo Coming Soon</span>
                   )}
                   {project.githubUrl ? (
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-analytics-label={`${project.title} GitHub`}
+                      data-analytics-category="link"
+                    >
+                      GitHub
+                    </a>
                   ) : (
                     <span className="project-link-disabled">Repo Private</span>
                   )}

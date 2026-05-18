@@ -14,15 +14,34 @@ function Contact() {
               I'm always open to discussing new opportunities, projects, or ideas. Feel free to reach out to me!
             </p>
             <div className="contact-links-container">
-              <a href="https://www.linkedin.com/in/andrewmaklakov/" target="_blank" rel="noopener noreferrer" className="contact-link-item">
+              <a
+                href="https://www.linkedin.com/in/andrewmaklakov/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-link-item"
+                data-analytics-label="Contact LinkedIn"
+                data-analytics-category="link"
+              >
                 <FaLinkedin className="contact-icon" />
                 <span>LinkedIn</span>
               </a>
-              <a href="https://github.com/amaklakovv" target="_blank" rel="noopener noreferrer" className="contact-link-item">
+              <a
+                href="https://github.com/amaklakovv"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-link-item"
+                data-analytics-label="Contact GitHub"
+                data-analytics-category="link"
+              >
                 <FaGithub className="contact-icon" />
                 <span>GitHub</span>
               </a>
-              <a href="mailto:andy.maklakov@gmail.com" className="contact-link-item">
+              <a
+                href="mailto:andy.maklakov@gmail.com"
+                className="contact-link-item"
+                data-analytics-label="Contact Email"
+                data-analytics-category="link"
+              >
                 <FaEnvelope className="contact-icon" />
                 <span>andy.maklakov@gmail.com</span>
               </a>
