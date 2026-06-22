@@ -1,37 +1,30 @@
 export const projects = [
   {
-    title: 'Exam Scheduler',
-    description: 'Created a web app to convert Excel exam timetables into a searchable, real-time scheduling tool, used by dozens of students to quickly locate their exams, replacing manual Excel searches with simple interfaces.',
-    tags: ['Python', 'JavaScript', 'HTML/CSS', 'Problem Solving'],
-    liveUrl: 'https://am-examscheduler.netlify.app/',
-    githubUrl: 'https://github.com/amaklakovv/ExamScheduler'
+    title: 'AI Code Performance Benchmarker',
+    description: 'Developed a structured benchmarking framework using isolated Docker containers to profile memory usage, execution time, and functional correctness of LLM-generated code across multiple languages.',
+    tags: ['Java', 'Ruby', 'TypeScript', 'Docker', 'Linux'],
+    liveUrl: null,
+    githubUrl: null
   },
   {
-    title: 'Code Catchers',
-    description: 'Overseeing Agile sprints and stand-ups, assisting in coordinating a six-person team across design, development, and testing. Developed scalable backend/frontend logic, Live Multiplayer, UI features, contributing to improved game retention metrics.',
-    tags: ['JavaScript', 'Project Management', 'Teamwork', 'Agile', 'Node.js', 'Phaser'],
+    title: 'Real-time Multiplayer Application',
+    description: 'Engineered core client-server logic and real-time state synchronization for an interactive web application, leading a 6-person Agile team to meet tight production deadlines.',
+    tags: ['Node.js', 'React', 'Phaser.js', 'WebSockets'],
     liveUrl: 'https://code-catchers.onrender.com',
     githubUrl: null
   },
   {
-    title: 'AI Chrome Extension',
-    description: 'Engineered a Chrome extension that automatically processes and summarises Gmail inbox content using AI. Uses a secure FastAPI backend with AI integration and implemented OAuth2 authentication for Gmail access.',
-    tags: ['APIs', 'Python', 'JavaScript', 'Chrome Extensions', 'Problem Solving'],
+    title: 'Gmail AI Chrome Extension',
+    description: 'Built a full-stack Chrome extension using AI, OAuth2 authentication, and third-party APIs to securely process, summarise, and draft contextual replies for Gmail inboxes.',
+    tags: ['Python', 'APIs', 'JavaScript', 'OAuth2'],
     liveUrl: 'https://www.youtube.com/watch?v=xR5xCEttZbI',
     githubUrl: 'https://github.com/amaklakovv/email-extension'
   },
-  {
-    title: 'Code Collaborator App',
-    description: 'Built a real-time collaborative code editor with live typing, shared rooms, and typing indicators. Engineered frontend using React and Monaco Editor, backend in FastAPI handling WebSocket sync.',
-    tags: ['Python', 'WebSockets', 'React', 'JavaScript'],
-    liveUrl: null,
-    githubUrl: 'https://github.com/amaklakovv/CodeCollaborator'
-  },
-  {
-    title: 'Collaborative Java Application',
-    description: 'Led front-end development and implemented animation systems to enhance interactivity. Increased visual feedback responsiveness by 40%, improving usability scores from peer testing.',
-    tags: ['Java', 'Project Management', 'Git', 'UX'],
-    liveUrl: null,
-    githubUrl: null
+  { 
+    title: 'Exam Scheduler',
+    description: 'Created a web app to convert Excel exam timetables into a searchable, real-time scheduling tool, used by dozens of students to quickly locate their exams, replacing manual Excel searches with simple interfaces.',
+    tags: ['Python', 'JavaScript', 'HTML/CSS', 'Problem Solving'],
+    liveUrl: 'https://am-examscheduler.pvmcore.com/',
+    githubUrl: 'https://github.com/amaklakovv/ExamScheduler'
   }
 ];

@@ -27,10 +27,10 @@ function Projects() {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      data-analytics-label={`${project.title} Live Demo`}
+                      data-analytics-label={`${project.title} Demo`}
                       data-analytics-category="link"
                     >
-                      Live Demo
+                      Demo
                     </a>
                   ) : (
                     <span className="project-link-disabled">Demo Coming Soon</span>

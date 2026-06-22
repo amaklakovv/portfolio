@@ -1,29 +1,54 @@
 import React, { useState, useLayoutEffect, useRef } from 'react';
 import GlassCard from './GlassCard';
 import { useOnScreen } from '../hooks/useOnScreen';
-import { BsCodeSlash, BsTools, BsGearFill, BsPeopleFill } from 'react-icons/bs';
+import { BsCodeSlash, BsTools, BsGearFill } from 'react-icons/bs';
 import { trackButtonClick } from '../analytics';
 
 const skillsConfig = [
   {
-    name: "Languages",
+    name: 'Languages',
     icon: <BsCodeSlash className="skill-tab-icon" />,
-    skills: ["Java", "C#", "C/C++", "Python", "JavaScript", "TypeScript", "PHP", "SQL", "Linux"]
+    skills: [
+      'Java',
+      'C#',
+      'TypeScript',
+      'JavaScript',
+      'Python',
+      'SQL (PostgreSQL)',
+      'C/C++',
+      'PHP',
+      'Linux'
+    ]
   },
   {
-    name: "Tools & Tech",
+    name: 'Frameworks & Backend',
     icon: <BsTools className="skill-tab-icon" />,
-    skills: ["AWS (EC2, S3, Lambda)", "Git (Branching, PRs, CI/CD)", "Docker", "Unreal Engine 5", "MySQL", "APIs", "WebSockets"]
+    skills: [
+      '.NET',
+      'React',
+      'Node.js',
+      'Express',
+      'FastAPI',
+      'APIs',
+      'WebSockets',
+      'Machine Learning',
+      'AI',
+      'UX Design/Testing',
+      'Testing (JUnit, Integration, E2E)',
+      'Agile Development'
+    ]
   },
   {
-    name: "Frameworks & Methodologies",
+    name: 'DevOps & Infrastructure',
     icon: <BsGearFill className="skill-tab-icon" />,
-    skills: ["Agile Development", "Testing (JUnit, Integration, E2E)", ".NET", "Node.js/Express", "React", "Full-Stack Development", "UX Design/Testing", "Machine Learning", "AI"]
-  },
-  {
-    name: "Soft Skills",
-    icon: <BsPeopleFill className="skill-tab-icon" />,
-    skills: ["Leadership", "Teamwork", "Problem Solving", "Communication", "Project Management", "E2E Feature Development", "Collaborative Codebase Contributions", "Public Speaking"]
+    skills: [
+      'Docker',
+      'AWS (EC2, S3, Lambda)',
+      'Linux/Unix',
+      'Git (Branching, PRs, CI/CD)',
+      'Unreal Engine 5',
+      'MySQL'
+    ]
   }
 ];
 

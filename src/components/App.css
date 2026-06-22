@@ -7,7 +7,7 @@
   min-height: 80vh;
 }
 
-#home, #about, #projects, #contact {
+#home, #about, #experience, #projects, #contact {
   scroll-margin-top: 80px;
 }
 

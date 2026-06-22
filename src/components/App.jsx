@@ -83,13 +83,11 @@ function App() {
     'a final year engineering student',
     'a software engineering major',
     'a problem solver',
-    'a team player',
-    'a fast learner',
-    'a creative thinker',
+    'a cross-functional team player',
+    'a fast adapting engineer',
+    'a product-minded thinker',
     'a scalable developer',
-    'a lifelong learner',
-    'an AI enthusiast',
-    'a tech explorer'
+    'a continuous builder'
   ];
 
   return (

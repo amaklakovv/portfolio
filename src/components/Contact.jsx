@@ -11,7 +11,7 @@ function Contact() {
         <GlassCard hoverIntensity={3}>
           <div className="contact-content">
             <p>
-              I'm always open to discussing new opportunities, projects, or ideas. Feel free to reach out to me!
+              I'm always open to discussing projects, new opportunities, or ideas.
             </p>
             <div className="contact-links-container">
               <a
