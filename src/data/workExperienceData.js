@@ -8,11 +8,11 @@ export const experienceData = [
     tags: ["C# .NET", "React", "TypeScript", "SQL", "Docker", "Git"]
   },
     {
-    title: "Co-founder & Engineer",
-    company: "Tech Solutions Partnership",
+    title: "COO & Engineer",
+    company: "Software Solutions Business",
     companyUrl: "#",
     date: "Feb 2026 - Present",
-    description: "Architecting and deploying bespoke full-stack solutions utilizing PostgreSQL, third-party API integrations, and modern frontend workflows. Managing the complete project lifecycle from initial client discovery to cloud deployment, ensuring high performance and system reliability. Steering technical strategy and code reviews across multiple concurrent client projects.",
-    tags: ["PostgreSQL", "React", "Node.js", "REST APIs", "Cloud Deployment"]
+    description: "Owned full project lifecycles, from discovery to build and deployment; delivering websites and platforms that grew a client's customer reach and sales; currently engaged on further client projects. Built scalable full-stack solutions, third-party API integrations and modern frontend workflows, balancing performance and reliability against client budgets and timelines. Directed technical strategy and led code reviews, maintaining consistent quality and design standards across concurrent client-facing projects.",
+    tags: ["UX Design", "React", "TypeScript", "REST APIs", "Git", "Agile"]
   }
 ];
